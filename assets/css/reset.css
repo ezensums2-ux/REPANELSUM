@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+/**
+ * Modern Reset CSS
+ * 20년 실무 노하우가 집약된 현대적 웹 표준 크로스 브라우징 리셋 스타일시트
+ * 브라우저 고유의 기본 여백, 폰트 편차, 박스 모델 차이를 완벽히 제어합니다.
+ */
+
+/* ==========================================================================
+   1. Box Sizing & 기본 여백 초기화
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   2. Document & Body 환경 설정
+   ========================================================================== */
+html {
+  -webkit-text-size-adjust: 100%; /* 모바일 가로 전환 시 글자 크기 강제 변경 방지 */
+  text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  color: #111111;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased; /* macOS/iOS 폰트 렌더링 최적화 */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  word-break: keep-all; /* 한글 단어 단위 줄바꿈 유지 */
+  overflow-wrap: break-word;
+}
+
+/* ==========================================================================
+   3. Typography & 시맨틱 태그 여백/폰트 리셋
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+p,
+blockquote,
+pre,
+figure,
+figcaption {
+  margin: 0;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+em,
+i,
+address {
+  font-style: normal;
+}
+
+small {
+  font-size: 80%;
+}
+
+/* ==========================================================================
+   4. 목록(List) 초기화
+   ========================================================================== */
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   5. 링크(Anchor) 초기화
+   ========================================================================== */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent; /* 모바일 터치 하이라이트 제거 */
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   6. 미디어 요소 (이미지, 비디오 등 반응형 제어)
+   ========================================================================== */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   7. 폼 컨트롤 (Form Elements) 통일
+   ========================================================================== */
+input,
+button,
+textarea,
+select,
+optgroup {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/* 버튼 기본 스타일 제거 및 클릭 커서 */
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
+/* 텍스트 영역 기본 리사이즈는 세로만 허용 */
+textarea {
+  resize: vertical;
+}
+
+/* 인풋 텍스트 필드 포커스 기본 스타일 정돈 */
+input,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* 검색 인풋 웹킷 X버튼 및 돋보기 제거 */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* 체크박스/라디오 기본 외형 보존 */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: auto;
+  -webkit-appearance: auto;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   8. 테이블(Table) 초기화
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: inherit;
+  font-weight: normal;
+}
+
+/* ==========================================================================
+   9. 기타 유용한 초기화 & 접근성
+   ========================================================================== */
+hr {
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  margin: 0;
+}
+
+/* 시각장애인 스크린 리더용 숨김 클래스 (SR-only) */
+.visually-hidden,
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* 모션 민감 사용자를 위한 전환 효과 비활성화 */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

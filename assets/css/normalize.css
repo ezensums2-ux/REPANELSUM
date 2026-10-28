@@ -1,0 +1,318 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* ==========================================================================
+   Document
+   ========================================================================== */
+
+/**
+ * 1. 모든 브라우저에서 기본 line-height를 일관되게 보정합니다.
+ * 2. iOS에서 방향 전환 시 폰트 크기가 임의로 확대되는 현상을 방지합니다.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+/**
+ * 브라우저 기본 body margin을 제거합니다.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * 구형 브라우저(IE 9 등)에서 main 태그가 블록 레벨로 올바르게 렌더링되도록 합니다.
+ */
+main {
+  display: block;
+}
+
+/**
+ * h1 폰트 크기와 마진을 브라우저 전반에서 일관되게 맞춥니다.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* ==========================================================================
+   Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Firefox에서 box-sizing 계산 차이를 맞춥니다.
+ * 2. Edge 및 IE에서 overflow 표시 문제를 해결합니다.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. monospace 폰트의 크기 및 상속 불일치를 해결합니다.
+ * 2. 모든 브라우저에서 1em 크기를 정확히 표시합니다.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* ==========================================================================
+   Text-level semantics
+   ========================================================================== */
+
+/**
+ * IE 10에서 활성화된 링크의 회색 배경을 제거합니다.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Chrome 57 이전 버전의 하단 border 제거.
+ * 2. 최신 브라우저에서 올바른 점선 밑줄 데코레이션을 추가합니다.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * 브라우저 간 bold 굵기 차이를 방지하고 더 굵게 지정합니다.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 코드 및 샘플 텍스트의 고정폭 글꼴 일관성을 유지합니다.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * small 요소의 글자 크기를 80%로 축소합니다.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * sub 및 sup 요소가 부모 line-height에 영향을 주지 않도록 위치를 조정합니다.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * IE 10 이하에서 링크 내부 이미지에 생기는 외곽선을 제거합니다.
+ */
+img {
+  border-style: none;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * 1. 폼 컨트롤 요소들이 부모의 폰트 스타일을 상속받도록 통일합니다.
+ * 2. Firefox 및 Safari의 기본 마진을 제거합니다.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Edge 및 IE에서 버튼과 인풋의 overflow 문제를 해결합니다.
+ */
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * Edge, Firefox, IE에서 text-transform 상속 불일치를 방지합니다.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * iOS 및 Safari에서 클릭 가능한 버튼류의 기본 외형을 button 스타일로 고정합니다.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Firefox 내부 버튼의 패딩과 테두리를 정리합니다.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Firefox에서 포커스 링 스타일을 복원합니다.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Firefox의 fieldset 기본 패딩을 일관되게 보정합니다.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Edge/IE에서 범례 텍스트 줄바꿈을 올바르게 처리합니다.
+ * 2. fieldset 색상 상속을 유지합니다.
+ * 3. 패딩을 초기화합니다.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Chrome, Firefox, Opera에서 진행바의 세로 정렬 기준선을 맞춥니다.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * IE 10+에서 textarea의 불필요한 기본 스크롤바를 숨기고 필요할 때만 노출합니다.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 체크박스/라디오 버튼의 box-sizing 및 패딩을 초기화합니다.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * Chrome에서 number input의 스핀 버튼 높이를 바로잡습니다.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. search input의 Safari 및 Chrome 특유의 검색창 외형을 기본 텍스트필드로 맞춥니다.
+ * 2. Safari 아웃라인 오프셋을 맞춥니다.
+ */
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * macOS Safari/Chrome에서 검색 필드의 cancel/decoration 패딩을 제거합니다.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. iOS/Safari에서 파일 업로드 버튼 외형을 통일합니다.
+ * 2. 폰트 상속을 보정합니다.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* ==========================================================================
+   Interactive
+   ========================================================================== */
+
+/**
+ * details 요소를 블록으로 표시합니다.
+ */
+details {
+  display: block;
+}
+
+/**
+ * summary 요소를 리스트 아이템 형태로 일관되게 표시합니다.
+ */
+summary {
+  display: list-item;
+}
+
+/* ==========================================================================
+   Misc
+   ========================================================================== */
+
+/**
+ * template 요소가 화면에 나타나지 않도록 숨깁니다.
+ */
+template {
+  display: none;
+}
+
+/**
+ * hidden 속성이 부여된 요소를 확실히 숨깁니다.
+ */
+[hidden] {
+  display: none;
+}
